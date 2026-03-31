@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB Osun - 18th Holiday Islamic Course (HIC)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Amiri:wght@700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .arabic-text { font-family: 'Amiri', serif; }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .location-active { border-bottom: 4px solid #059669; color: #059669; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <header class="bg-white py-4 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center text-white font-bold">SB</div>
+                <div>
+                    <h1 class="font-extrabold text-emerald-800 text-sm md:text-xl leading-tight uppercase">Standard Bearers Islamic Org.</h1>
+                    <p class="text-xs text-gray-500 font-semibold tracking-widest">OSUN STATE CHAPTER</p>
+                </div>
+            </div>
+            <button onclick="openRegister()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-full font-bold transition-all shadow-lg hover:shadow-emerald-200">
+                Register Now
+            </button>
+        </div>
+    </header>
+
+    <section class="relative bg-emerald-900 text-white py-16 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://www.transparenttextures.com/patterns/islamic-art.png" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <span class="bg-yellow-400 text-emerald-900 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">18th Edition April Camp</span>
+            <h2 class="text-4xl md:text-6xl font-black mt-4 mb-2">Holiday Islamic Course</h2>
+            <div class="arabic-text text-3xl md:text-5xl my-6 text-emerald-200">السلام الأبدي</div>
+            <h3 class="text-2xl md:text-4xl font-light italic opacity-90">"The Everlasting Peace"</h3>
+            <p class="mt-6 text-lg text-emerald-100 max-w-2xl mx-auto">
+                Join us for an immersive weekend of spiritual growth, learning, and brotherhood. 
+                <span class="block mt-2 font-semibold">Friday 17th - Monday 20th April, 2026</span>
+            </p>
+        </div>
+    </section>
+
+    <nav class="bg-white border-b sticky top-[72px] z-40">
+        <div class="container mx-auto px-4 flex justify-center space-x-8">
+            <button id="tab-ife" onclick="switchLocation('ife')" class="py-4 px-6 font-bold text-lg transition-all location-active">
+                <i class="fas fa-mosque mr-2"></i> Ile-Ife Camp
+            </button>
+            <button id="tab-osogbo" onclick="switchLocation('osogbo')" class="py-4 px-6 font-bold text-lg text-gray-400 hover:text-emerald-600 transition-all">
+                <i class="fas fa-kaaba mr-2"></i> Osogbo Camp
+            </button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="grid lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-2 space-y-8">
+                
+                <div id="content-ife" class="location-content animate-fade-in">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-emerald-100">
+                        <h4 class="text-2xl font-bold text-emerald-800 mb-4">Venue Details (Ile-Ife)</h4>
+                        <div class="flex items-start space-x-4">
+                            <div class="text-emerald-600 text-2xl"><i class="fas fa-map-marker-alt"></i></div>
+                            <p class="text-lg text-gray-700">Baptist Elementary Primary School Sabo, along Oduduwa College, Ile-Ife, Osun State.</p>
+                        </div>
+                        <hr class="my-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">Camp Registration Fees</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-100">
+                                <p class="text-sm text-emerald-600 font-bold uppercase">Early Bird</p>
+                                <p class="text-3xl font-black text-emerald-800">₦5,000</p>
+                                <p class="text-xs text-red-500 mt-1">*Ends 10th April, 2026</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                <p class="text-sm text-gray-500 font-bold uppercase">Flat Rate</p>
+                                <p class="text-3xl font-black text-gray-800">₦6,500</p>
+                                <p class="text-xs text-gray-400 mt-1">Standard registration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-osogbo" class="location-content hidden animate-fade-in">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-emerald-100">
+                        <h4 class="text-2xl font-bold text-emerald-800 mb-4">Venue Details (Osogbo)</h4>
+                        <div class="flex items-start space-x-4">
+                            <div class="text-emerald-600 text-2xl"><i class="fas fa-map-marker-alt"></i></div>
+                            <p class="text-lg text-gray-700">MOLEK NURSERY AND PRIMARY SCHOOL OFA PRIME, OFATEDO, Osogbo.</p>
+                        </div>
+                        <hr class="my-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">Camp Registration Fees</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-100">
+                                <p class="text-sm text-emerald-600 font-bold uppercase">Early Bird</p>
+                                <p class="text-2xl font-black text-emerald-800">₦5,000</p>
+                                <p class="text-xs text-red-500 mt-1">*Ends 12th April</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                <p class="text-sm text-gray-500 font-bold uppercase">Workers/HEI</p>
+                                <p class="text-2xl font-black text-gray-800">₦6,500</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                <p class="text-sm text-gray-500 font-bold uppercase">Secondary</p>
+                                <p class="text-2xl font-black text-gray-800">₦6,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-white p-6 rounded-xl shadow-sm text-center border-b-4 border-emerald-500">
+                        <i class="fas fa-book-open text-emerald-600 text-2xl mb-2"></i>
+                        <p class="font-bold">Tafseer</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm text-center border-b-4 border-emerald-500">
+                        <i class="fas fa-gavel text-emerald-600 text-2xl mb-2"></i>
+                        <p class="font-bold">Fiqh</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm text-center border-b-4 border-emerald-500">
+                        <i class="fas fa-users text-emerald-600 text-2xl mb-2"></i>
+                        <p class="font-bold">Singles' Seminar</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm text-center border-b-4 border-emerald-500">
+                        <i class="fas fa-running text-emerald-600 text-2xl mb-2"></i>
+                        <p class="font-bold">Sports</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm text-center border-b-4 border-emerald-500">
+                        <i class="fas fa-language text-emerald-600 text-2xl mb-2"></i>
+                        <p class="font-bold">Arabic Day</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm text-center border-b-4 border-emerald-500">
+                        <i class="fas fa-scroll text-emerald-600 text-2xl mb-2"></i>
+                        <p class="font-bold">Hadith</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-emerald-800 text-white p-8 rounded-2xl shadow-xl">
+                    <h4 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-phone-alt mr-3 text-yellow-400"></i> Enquiries
+                    </h4>
+                    <div class="space-y-4 text-sm">
+                        <div class="border-b border-emerald-700 pb-2">
+                            <p class="font-bold text-emerald-300">Osogbo</p>
+                            <p>09053444178, 09035210398</p>
+                        </div>
+                        <div class="border-b border-emerald-700 pb-2">
+                            <p class="font-bold text-emerald-300">Ile-Ife</p>
+                            <p>07039042763, 08148093170</p>
+                        </div>
+                        <div class="pb-2">
+                            <p class="font-bold text-emerald-300">Other Areas</p>
+                            <p class="text-xs opacity-80 mb-1 italic">(Ilesha, Okuku, Ila, Ede)</p>
+                            <p>08134747377, 08164044256</p>
+                        </div>
+                    </div>
+                    <button id="btn-register-main" onclick="openRegister()" class="w-full mt-8 bg-yellow-400 hover:bg-yellow-500 text-emerald-900 font-extrabold py-4 rounded-xl transition-all uppercase tracking-widest shadow-lg">
+                        Proceed to Register
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="registerModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 md:p-8">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeRegister()"></div>
+        <div class="relative bg-white w-full max-w-4xl h-[90vh] rounded-3xl overflow-hidden shadow-2xl flex flex-col">
+            <div class="p-4 border-b flex justify-between items-center bg-gray-50">
+                <h3 class="font-bold text-emerald-800">Registration Portal</h3>
+                <button onclick="closeRegister()" class="text-gray-500 hover:text-red-500 text-2xl">&times;</button>
+            </div>
+            <div class="flex-grow">
+                <iframe id="regIframe" src="https://pay.sgm.ng/embed/whicife" class="w-full h-full border-none"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-100 py-8 text-center text-gray-500 text-sm border-t">
+        <p>&copy; 2026 Standard Bearers Islamic Organization (SB) Osun State. All Rights Reserved.</p>
+        <p class="mt-2 text-emerald-600 font-semibold tracking-widest uppercase">The Real Camping Experience</p>
+    </footer>
+
+    <script>
+        let currentLocation = 'ife';
+
+        function switchLocation(loc) {
+            currentLocation = loc;
+            // Update Tabs
+            const ifeTab = document.getElementById('tab-ife');
+            const osogboTab = document.getElementById('tab-osogbo');
+            const ifeContent = document.getElementById('content-ife');
+            const osogboContent = document.getElementById('content-osogbo');
+
+            if (loc === 'ife') {
+                ifeTab.classList.add('location-active', 'text-emerald-600');
+                ifeTab.classList.remove('text-gray-400');
+                osogboTab.classList.remove('location-active', 'text-emerald-600');
+                osogboTab.classList.add('text-gray-400');
+                ifeContent.classList.remove('hidden');
+                osogboContent.classList.add('hidden');
+            } else {
+                osogboTab.classList.add('location-active', 'text-emerald-600');
+                osogboTab.classList.remove('text-gray-400');
+                ifeTab.classList.remove('location-active', 'text-emerald-600');
+                ifeTab.classList.add('text-gray-400');
+                osogboContent.classList.remove('hidden');
+                ifeContent.classList.add('hidden');
+            }
+        }
+
+        function openRegister() {
+            const iframe = document.getElementById('regIframe');
+            const baseUrl = "https://pay.sgm.ng/embed/";
+            iframe.src = currentLocation === 'ife' ? baseUrl + "whicife" : baseUrl + "whicosogbo";
+            
+            document.getElementById('registerModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        }
+
+        function closeRegister() {
+            document.getElementById('registerModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
